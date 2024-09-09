@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+*{
+    box-sizing: border-box;
+    font-family: "Itim", sans-serif; 
+}
+body
+{
+    margin: 0;
+    background: #f4f4fb;
+}
+header
+{
+    width: 100%;
+
+    margin: 0 auto;
+}
+nav
+{
+    position: relative;
+    top: 200%;
+    width: 115.0.9%;
+    display: flex;
+    justify-content: space-between;
+    background: #f7f449;
+}
+nav ul
+{  
+    margin: 4;
+    display: flex;
+}
+nav ul li
+{
+    list-style: none;
+}
+nav ul li a
+{
+    font-size: 18px;
+    font-weight: 600;
+    height: 90px;
+    line-height: 30px;
+    padding: 0px 10px;
+    text-decoration: none;
+    color: #000000;
+    display: block;
+}
+nav ul li a:hover
+{
+    background: #686868;
+    color: #ffffff;
+    transition: all .3s;
+}
+.Logo
+{
+    font-size: 20px;
+    font-weight: 700;
+    height: 60px;
+    line-height: 60px;
+    padding: 0px 10px;
+}
+.toggle
+{
+    position: absolute;
+    top: 0;
+    right: 20px;
+    color: #000000;
+    line-height: 60px;
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
+}
+@media screen and (max-width: 960px)
+{
+   header nav{display: block;} 
+   header nav ul{display: block;} 
+   .toggle{display: block;}
+   .toggle::before
+   {
+    content: '\f0c9';
+    font-family: fontAwesome;
+    line-height: 60px;
+    }
+    .toggle.active::before
+    {
+     content: '\f00d';
+    }
+    header nav ul
+    {
+     position: absolute;
+     width: 200px;
+     height: 71vh;
+     background: #d6d838;
+     top: 56px;
+     left: -100%;
+     transition: .8s;
+     z-index: 0;
+     padding: 0;
+    }
+    header nav ul.active
+    {
+        left: 0;
+        transition: .4s;
+   }
+   header nav ul li a
+   {
+        padding: 30px;
+   }
+}
